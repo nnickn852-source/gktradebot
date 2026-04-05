@@ -553,18 +553,18 @@ def is_admin(user_id):
     last_admin_chat_id = chat_id
     text = (text or "").strip().lower()
 
-    # ✅ DEBUG
+    # DEBUG
     print("TEXT =", text)
     print("USER_ID =", user_id)
     print("ADMIN_IDS =", ADMIN_IDS)
     print("IS_ADMIN =", is_admin(user_id))
-    
+
     if text == "/id":
         send_message(chat_id, f"Your user id: {user_id}")
         return
 
     if not is_admin(user_id):
-        if text.startswith("/start"):
+        if text.startswith("/start") or text == "/stop" or text == "/status":
             send_message(chat_id, "Bu komanda yalnız admin üçündür.")
         return
 
