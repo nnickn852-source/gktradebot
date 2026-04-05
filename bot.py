@@ -6,8 +6,9 @@ from collections import defaultdict, deque
 # =========================
 # ENV
 # =========================
-TELEGRAM_TOKEN = os.getenv("8666018703:AAFvfvUEZNctUc2PfJGdjyjRQn6STk3YusQ")
-ALPHA_VANTAGE_KEY = os.getenv("BKPI10EVCQO9M7V7")  # opsional
+
+TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN")
+ALPHA_VANTAGE_KEY = os.getenv("ALPHA_VANTAGE_KEY")
 CHANNEL_ID = int(os.getenv("CHANNEL_ID", "-1001234567890"))
 
 # vergüllə ayır: 123,456
