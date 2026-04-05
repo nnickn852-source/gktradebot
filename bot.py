@@ -551,7 +551,10 @@ def handle_command(text, user_id, chat_id):
 
     last_admin_chat_id = chat_id
     text = (text or "").strip().lower()
-
+print("TEXT =", text)
+print("USER_ID =", user_id)
+print("ADMIN_IDS =", ADMIN_IDS)
+print("IS_ADMIN =", is_admin(user_id))
     if text == "/id":
         send_message(chat_id, f"Your user id: {user_id}")
         return
