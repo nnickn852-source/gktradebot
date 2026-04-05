@@ -546,15 +546,19 @@ def check_birja_mode():
 def is_admin(user_id):
     return user_id in ADMIN_IDS
 
-def handle_command(text, user_id, chat_id):
+
+  def handle_command(text, user_id, chat_id):
     global active_modes, last_admin_chat_id
 
     last_admin_chat_id = chat_id
     text = (text or "").strip().lower()
-print("TEXT =", text)
-print("USER_ID =", user_id)
-print("ADMIN_IDS =", ADMIN_IDS)
-print("IS_ADMIN =", is_admin(user_id))
+
+    # ✅ DEBUG
+    print("TEXT =", text)
+    print("USER_ID =", user_id)
+    print("ADMIN_IDS =", ADMIN_IDS)
+    print("IS_ADMIN =", is_admin(user_id))
+    
     if text == "/id":
         send_message(chat_id, f"Your user id: {user_id}")
         return
